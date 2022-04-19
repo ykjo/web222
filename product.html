@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yong Kung Jo</title>
+    <script src="https://kit.fontawesome.com/16ecdfa4c3.js" crossorigin="anonymous"></script> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <header>                                    
+       <div class="logo">
+            <h1>YKJO Products</h1>
+        </div>
+        <nav>
+            <ol>
+                <li><a href="honesty.html">Honesty</a></li>
+                <li><a href="#" class="current">Product</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+            </ol>
+        </nav>
+    </header>
+    <main class="product-main">
+        
+        <div class="form-container">
+            <h3>Product Info Page</h3>                  
+           <form action="https://httpbin.org/post" method="post" id="signup" name="signup"> 
+               <input type="hidden" name="lastName" id="lastName" value="Jo">                     
+               <input type="hidden" name="studentID" id="studentId" value="108932211">             
+              <div>                                                                               
+                   <label for="productId">Product ID</label>
+                   <input 
+                   type="text" 
+                   pattern="^\d{8}$" 
+                   name="productId" 
+                   id="productId" 
+                   placeholder="Enter the Product ID" 
+                   oninvalid="this.setCustomValidity('Digit only and 8 characters long')"
+                   oninput="this.setCustomValidity('')" 
+                   required> 
+               </div>
+               <div>                                                                                  
+                   <label for="productdescription">Product Description</label>
+                   <textarea  
+                   name="productdescription" 
+                   id="productdescription" 
+                   placeholder="Must start with a cap and only alphabet allowed. Must contain at least 20 characters. Use textarea as input field." 
+                   minlength="20" 
+                   required></textarea>
+               </div>
+               <div>                                                                                  
+                   <label for="price">Price</label>
+                   <input 
+                   type="text" 
+                   pattern="^\d{1,3}$" 
+                   name="price" 
+                   id="price" 
+                   placeholder="Digit only, decimal not allowed. Less than 1000."
+                   oninvalid="this.setCustomValidity('Digit only, decimal not allowed. Less than 1000')"
+                   oninput="this.setCustomValidity('')" 
+                   required>
+               </div>
+               <div>                                                                                  
+                   <label for="username">Supplier Username</label>
+                   <input 
+                   type="text" 
+                   name="username" 
+                    id="username" 
+                   placeholder="username must start with an alphabet, must have at least 6 characters." 
+                   required>
+               </div>
+               <label for="checkbox-container">Supplier Status</label>
+               <div class="checkbox-container">                                                    
+                   <div>
+                       <label for="NewSupplier" class="checkbox">New Supplier</label>
+                       <input 
+                       type="checkbox" 
+                       name="SupplierStatus" 
+                       id="NewSupplier" >
+                   </div>
+                   <div> 
+                       <label for="ContractSigned" class="checkbox">Contract Signed</label>
+                       <input 
+                       type="checkbox" 
+                       name="SupplierStatus" 
+                       id="ContractSigned" >
+                   </div>
+                   <div>
+                       <label for="QualityTested" class="checkbox">Quality Tested</label>
+                       <input 
+                       type="checkbox" 
+                       name="SupplierStatus" 
+                       id="QualityTested" >
+                   </div>
+               </div>
+               <div>                                                                           
+                   <label for="email">Supplier Email</label>
+                   <input 
+                    type="email" 
+                   name="email" 
+                   id="email" 
+                   placeholder="Enter your e-mail address" 
+                   required>
+               </div>
+               <div class="button-container">                                              
+                   <button type="reset">Reset</button>
+                   <button type="submit">Submit</button>
+               </div>
+           </form>
+        </div>
+        <div class="errors" id="errors">                                                   
+        </div>
+    </main>
+    <footer>
+        <p>Yong Kung Jo @2022</p>
+        <p>GitHub - <a href="https://github.com/ykjo/web222">Link to Github</a></p>    </footer>
+    <script src="product.js"></script>
+</body>
+</html>

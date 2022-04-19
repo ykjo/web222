@@ -1,0 +1,19 @@
+.reflection 
+{
+min-height: 100px;
+}
+.reflectioncontent
+{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+font-size: 1em;
+width: 800px;
+border: 3px solid rgb(0, 0, 0);
+border-radius: 5px;
+margin: auto;
+}
+.reflectioncontent p 
+{
+padding-bottom: 20px;
+}
